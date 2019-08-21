@@ -7,7 +7,7 @@ def techcrunch(url):
     response = requests.get(url)
     # read the content of the server's response
     content = response.text
-    # pass the html document to beautiful which represents the document as a nested data structure
+    # parse the web page to BeautifulSoup which represents the document as a nested data structure
     soup = BeautifulSoup(content, 'html.parser')
     # find all links with the class 'post-block__title__link'
     links = soup.find_all('a', {'class': 'post-block__title__link'})
