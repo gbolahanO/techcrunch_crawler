@@ -3,7 +3,7 @@ import requests
 
 
 def techcrunch(url):
-        # make requests to web page url
+    # make requests to web page url
     response = requests.get(url)
     # read the content of the server's response
     content = response.text
